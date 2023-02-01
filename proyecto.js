@@ -5,12 +5,14 @@ let p = document.querySelector("#p")
 console.dir(video)
 let botonMuted = document.querySelector("#boton3")
 
-p.innerHTML = ("Duracion video : " + video.duration) 
 
 function play() {
     video.play()
+    p.innerHTML = ("Duracion video : " + video.duration)
 }
 function pause() {
     video.pause()
 }
+
+
 
