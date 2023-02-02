@@ -24,13 +24,12 @@ let lista = ["","",""];
 
 function over(event) {
     event.preventDefault();
-    console.log("S")
 }
 
 function drag(event) {
     event.dataTransfer.setData("Text", event.target.id);
-    console.log(event.target.id)
 }
+
 function drop(event) {
     if (lista[parseInt(event.target.id)] == "") {
         var dato = event.dataTransfer.getData("text");
@@ -48,7 +47,6 @@ function drop(event) {
         }
     }
 }
-
 
 function reinicio() {
     window.location.reload();
