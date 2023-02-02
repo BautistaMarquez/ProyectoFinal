@@ -14,9 +14,63 @@ header{
     height: 13.5vh;
     background-color: #181D31;
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
     align-items: center;
 }
+.svg{
+    margin-left: 40px;
+    margin-top: 25px;
+}
+/* animacion svg */
+rect#exterior1, polygon#exterior2{
+    animation: etapa1 ease-in-out 5s  ;
+    animation-iteration-count:1 ;
+    }
+    
+rect#interior1,polygon#interior2 {
+animation: etapa2 ease-in-out 5s  ;
+animation-iteration-count:1 ;
+}
+@keyframes etapa1{
+    0% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    20% {
+    transform: translate(0,-10px);
+    opacity:0;}
+    40% {
+    transform: translate(0,0);
+    opacity:1;}
+    90% {
+    transform: translate(0,0);
+    opacity:1;}
+    
+    100% {
+        transform: translate(0,0);
+        opacity:1;}
+}   
+    
+
+@keyframes etapa2 {
+    0% {
+        transform: translate(0,-10px);
+        opacity:0;}
+        30% {
+        transform: translate(0,-10px);
+        opacity:0;}
+        40% {
+        transform: translate(0,0);
+        opacity:1;}
+        90% {
+        transform: translate(0,0);
+        opacity:1;}
+
+        100% {
+            transform:translate(0,0);
+            opacity:1;}
+        }  
+
+/*-----------------------------------------*/
 .barra{
     list-style-type: none;
     display: flex;
@@ -30,10 +84,11 @@ header{
     border-radius: 8px;
     box-shadow: 2px 3px #678983;
 }
-.li1{
-    color: black;
+.nav:active{
+    transform: translate(3px, 2px);
+    box-shadow: none;
 }
-.li2{
+a{
     color: black;
 }
 .seccionfoto{
@@ -100,6 +155,10 @@ header{
     border-radius: 10px;
     box-shadow: 2px 3px #678983;
 }
+.boton:active{
+    transform: translate(3px, 2px);
+    box-shadow: none;
+}
 a{
     text-decoration: none;
 
@@ -120,10 +179,7 @@ footer{
     align-items: center;
     
 }
-.pie2{
-    display: flex;
-    align-items: center;
-}
+
 .nombre{
     color: #181D31;
 }
@@ -162,15 +218,10 @@ footer{
 }
 .h2texto3{
     text-align: center;
-    font-size: 40px;
     width: 25%;
-    text-shadow: 2px 2px black;
 }
-.ptexto3{
-    color: #E6DDC4;
-    font-size: 15px;
+.ptexto3{ 
     width: 75%;
-    text-align: start;
 }
 .seccionvideo{
     background-color: #181D31;
@@ -216,22 +267,28 @@ video{
     border-radius: 10px;
     width: 80px; 
 }
+.botonvideo:active{
+    transform: translate(3px, 2px);
+    box-shadow: none;
+}
 #p{
     color: white;
     margin: 30px 10px 10px 10px;
 }
 /* Pagina Juego */
+
 .seccionjuego{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    height: 180vh;
+    height: 160vh;
     width: 100vw;
     background-color:  #181D31;
 }
 .divdrop{
     display: flex;
+    margin-bottom: 20px;
 }
 .drop{
     width: 275px;
@@ -252,5 +309,10 @@ video{
     height: 400px;
     margin: 10px 0px;
 }
-
+.desaparecer{
+    display: none;
+}
+.reiniciar{
+    margin-top: 30px;
+}
 

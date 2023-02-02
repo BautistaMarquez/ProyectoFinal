@@ -10,10 +10,20 @@
 </head>
 <body>
     <header>
+        <div class="svg">
+            <svg  width="200" height="100">
+               <a href="./index.html">
+               <rect x="45" y="5" width="62" height="37" rx="5" id="exterior1" fill="#F0E9D2"></rect>
+               <rect x="50" y="10" width="52" height="26" rx="5" id="interior1" fill="#495579"></rect>
+               <polygon points="55 45 ,95 45,115 62,30 62" fill="#F0E9D2" id="exterior2"></polygon>
+               <polygon points="57 48 ,92 48,104 58,43 58" fill="#495579" id="interior2"></polygon>
+           </svg>
+           </a>
+        </div>
         <nav>
             <ul class="barra">
-                <a class="li1" href="./paginaHistoria.html"><li class="nav" >HISTORIA</li></a>
-                <a class="li2" href="./paginaJuguemos.html"><li class="nav" >JUGUEMOS</li></a>
+                <li class="nav"><a href="./paginaHistoria.html">HISTORIA</a></li>
+                <li class="nav"><a href="./paginaJuguemos.html">JUGUEMOS</a></li>
             </ul>
         </nav>
     </header>
@@ -24,17 +34,24 @@
         <section class="seccionjuego">
             <h2 class="titulo2">Armemos el rompecabezas y veamos que imagen es...</h2>
             <div class="divdrop">
-                <div class="drop"><p class="textodrop">arrastre y suelte la imagen aqui</p></div>
-                <div class="drop"><p class="textodrop">arrastre y suelte la imagen aqui</p></div>
-                <div class="drop"><p class="textodrop">arrastre y suelte la imagen aqui</p></div>
+
+                <div ondrop="drop(event)" ondragover="over(event)" id="0" class="drop"><p class="textodrop" id="p1">arrastre y suelte la imagen aqui</p></div>
+
+                <div ondrop="drop(event)" ondragover="over(event)" id="1" class="drop"><p class="textodrop" id="p2">arrastre y suelte la imagen aqui</p></div>
+
+                <div ondrop="drop(event)" ondragover="over(event)" id="2" class="drop"><p class="textodrop" id="p3">arrastre y suelte la imagen aqui</p></div>
             </div>
             <div class="imagenes">
-                <img draggable="true" class="imagenjuego" src="./imagenes/rompe2.png"alt="imagen juego2">
-                <img draggable="true" class="imagenjuego" src="./imagenes/Rompe1.png" alt="imagen juego1">
-                <img draggable="true" class="imagenjuego" src="./imagenes/Rompe3.png"alt="imagen juego3">
+
+                <img ondragstart="drag(event)" id="imagen2" draggable="true" class="imagenjuego" src="./imagenes/rompe2.png"alt="imagen juego2">
+
+                <img ondragstart="drag(event)"  id="imagen1" draggable="true" class="imagenjuego" src="./imagenes/Rompe1.png" alt="imagen juego1">
+
+                <img ondragstart="drag(event)" id="imagen3" draggable="true" class="imagenjuego" src="./imagenes/Rompe3.png"alt="imagen juego3">
+
             </div>
-            <div class="botonvideo">
-                <p class="reiniciar"> Reiniciar </p>
+            <div onclick="reinicio()" class="botonvideo">
+                <p> Reiniciar </p>
             </div>
         </section>
        
@@ -42,7 +59,7 @@
 
     <footer>
         <div class="pie1">
-            <img class="logopie" src="./imagenes/logo.png" alt="">
+            <img class="logopie" src="./imagenes/logo.png" alt="Logo">
             <span>
                 <p class="pie">PROGRAMACION</p>
                 <p class="pie">E</p>
@@ -50,7 +67,7 @@
             </span>
             
         </div>
-        <div class="pie2">
+        <div class="pie1">
             <P class="nombre">Sitio con fines educativos - Creado por B.Marquez Odera</P>
         </div>
     </footer>
